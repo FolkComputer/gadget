@@ -18,12 +18,13 @@ manually reconfigure if it's off Wi-Fi)
   - This prints in 3 parts so far: Main grip, thumbwheel, block
   - (Trigger inset itself is TODO)
 
-(can view in https://3dviewer.net -- the .shapr file is canonical /
-used to edit, the derived files are generated from it)
+(can view in https://3dviewer.net -- for the gadget chassis, the
+Gadget.shapr file is canonical / used to edit, the derived files are
+generated from it)
 
 ### Electronics
 
-- Ultimems HD305D1-C1 (recommended) or Nebra AnyBeam (should fit)
+- Ultimems HD305D1-C1 ([manual](https://www.ultimems.com/download/hd305d1-c1_rev1_0_20231005_english/)) (recommended) or Nebra AnyBeam (should fit)
   - There is a newer Ultimems unit [HD309D1-C1](https://raspberry-pi.ksyic.com/main/index/pdp.id/1053/pdp.open/1053) which I haven't tested yet
 - Raspberry Pi 5
   - (only the Pi 5 is guaranteed to supply the 5V1.1A
@@ -55,10 +56,9 @@ Cable](https://www.amazon.com/gp/product/B0D25V9QYG?ie=UTF8&th=1)
 
 - 4x M2 bolts for camera
   - 4x M2 nylock nuts for camera
-- 4x M2.5 bolts for pi 5
-  - 4x M2.5 standoffs for pi 5
+- 4x M2.5 bolts for Pi 5
+  - 4x M2.5 standoffs for Pi 5
 - 2x M2.5 bolts for front panel
   - 2x M2.5 heat set insert for front (to bolt front panel onto)
 - 1x 1/4 in bolt for top
 - 1x 1/4 in heat set insert for bottom
-
