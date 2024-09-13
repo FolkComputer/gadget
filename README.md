@@ -32,7 +32,8 @@ files are generated from it)
 - Raspberry Pi 5
   - (only the Pi 5 is guaranteed to supply the 5V1.1A
     over USB port to power the projector)
-  - microSD
+  - Pi 5 active cooler (fan)
+  - microSD card
   - 27W Pi 5 USB-C power supply
     - (you cannot use an off-the-shelf USB-C power supply; you must
       use this one)
@@ -60,15 +61,15 @@ Cable](https://www.amazon.com/gp/product/B0D25V9QYG?ie=UTF8&th=1)
 ### Other
 
 - 4x 6mm M2 bolts (for mounting camera to front panel)
-  - 4x [M2 nylock nuts](https://www.amazon.com/dp/B07BCC3NJ2) (for
+- 4x [M2 nylock nuts](https://www.amazon.com/dp/B07BCC3NJ2) (for
     mounting camera to front panel)
-    - <img src="doc/m2-nylock-nuts.jpg" height="60">
-- 4x M2.5 bolts for Pi 5
-  - 4x M2.5 standoffs for Pi 5
+  - <img src="doc/m2-nylock-nuts.jpg" height="60">
+- 8x M2.5 bolts for Pi 5 <-> standoffs <-> chassis
+- 4x M2.5 standoffs for Pi 5
 - 2x M2.5 bolts for front panel
-  - 2x M2.5 heat set insert for front (to bolt front panel onto)
-- 1x 1/4 in bolt for top
-- 1x 1/4 in heat set insert for bottom
+  - 2x M2.5 heat set inserts for front (to bolt front panel onto)
+- 1x 1/4" bolt for top
+- 1x 1/4" heat set insert for bottom
 
 ## Software setup
 
