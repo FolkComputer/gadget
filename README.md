@@ -14,13 +14,16 @@ manually reconfigure if it's off Wi-Fi)
 
 - Gadget chassis
   - This prints in 2 parts: Chassis and front panel
+    - (for front panel, should choose either Ultimems version with
+      smaller projector slit, or Nebra version with larger slit [since
+      the Nebra is shifted a little toward the side])
 - Handle grip with trigger button (in vendor/)
   - This prints in 3 parts so far: Main grip, thumbwheel, block
   - (Trigger inset itself is TODO)
 
 (can view in https://3dviewer.net -- for the gadget chassis, the
-Gadget.shapr file is canonical / used to edit, the derived files are
-generated from it)
+Gadget.shapr file is canonical / used to edit in Shapr3D, the derived
+files are generated from it)
 
 ### Electronics
 
@@ -34,9 +37,11 @@ generated from it)
     - (you cannot use an off-the-shelf USB-C power supply; you must
       use this one)
     - TODO: battery system
-- Pi wide angle camera module 3 (not noir) (? need to test)
-  - Pi camera ribbon cable (special, not the one that comes with
-    camera? Pi 5 has narrower MIPI ports)
+- [Raspberry Pi Camera 3 Wide](https://www.microcenter.com/product/662018/raspberry-pi-camera-3-wide) (NOT NoIR)
+  - [15-pin-to-22-pin "Pi Zero Camera
+    Cable"](https://www.amazon.com/dp/B0716TB6X3) (special, not the
+    one that comes with camera -- Pi 5 has narrower MIPI ports)
+    - <img src="doc/pi-camera-cable-1.jpg" height="60"> <img src="doc/pi-camera-cable-2.jpg" height="60">
 
 ### Cables
 
@@ -54,11 +59,35 @@ Cable](https://www.amazon.com/gp/product/B0D25V9QYG?ie=UTF8&th=1)
 
 ### Other
 
-- 4x M2 bolts for camera
-  - 4x M2 nylock nuts for camera
+- 4x 6mm M2 bolts (for mounting camera to front panel)
+  - 4x [M2 nylock nuts](https://www.amazon.com/dp/B07BCC3NJ2) (for
+    mounting camera to front panel)
+    - <img src="doc/m2-nylock-nuts.jpg" height="60">
 - 4x M2.5 bolts for Pi 5
   - 4x M2.5 standoffs for Pi 5
 - 2x M2.5 bolts for front panel
   - 2x M2.5 heat set insert for front (to bolt front panel onto)
 - 1x 1/4 in bolt for top
 - 1x 1/4 in heat set insert for bottom
+
+## Software setup
+
+Flash Raspberry Pi OS Lite.
+
+Add to boot/config.txt on the SD card:
+
+```
+# For Ultimems projector:
+hdmi_force_hotplug=1
+hdmi_drive=2
+config_hdmi_boost=4
+hdmi_group=2
+hdmi_mode=14
+#hdmi_safe=1
+```
+
+Boot the Pi. Ssh in and follow Folk README setup instructions.
+
+Use apt to install libcamera0.3 and libcamera-dev.
+
+Use `sudo nmtui` to add more Wi-Fi networks.
