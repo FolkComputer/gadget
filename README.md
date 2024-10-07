@@ -92,3 +92,22 @@ Boot the Pi. Ssh in and follow Folk README setup instructions.
 Use apt to install libcamera0.3 and libcamera-dev.
 
 Use `sudo nmtui` to add more Wi-Fi networks.
+
+Create ~/folk-live/setup.folk to set the camera to use wide-angle
+resolution and to create moving dashed outline around the perimeter of
+the projection:
+
+```
+Assert $this wishes $::thisNode uses camera "/base/axi/pcie@120000/rp1/i2c@88000/imx708@1a" with width 1280 height 1024
+
+Assert $this wishes $::thisNode uses display 0
+
+When display /disp/ has width /w/ height /h/ {
+  When the clock time is /t/ {
+    Wish to draw a dashed stroke with points [list [list 0 0] [list $w 0] [list $w $h] [list 0 $h] [list 0 0]] color white width 10 dashlength 40 dashoffset [expr {fmod($t, 10)*-120}]
+  }
+}
+```
+
+(the camera path may be different, Folk will print all valid camera paths
+in its journal at boot if you need to check: `sudo journalctl -u folk -n 30`)
