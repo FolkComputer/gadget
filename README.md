@@ -90,7 +90,7 @@ Cable](https://www.amazon.com/gp/product/B0D25V9QYG?ie=UTF8&th=1)
 
 ## Software setup
 
-Flash Raspberry Pi OS Lite.
+Flash Raspberry Pi OS Lite (64-bit).
 
 Add to boot/config.txt on the SD card:
 
