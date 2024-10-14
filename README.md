@@ -60,9 +60,11 @@ Cable](https://www.amazon.com/gp/product/B0D25V9QYG?ie=UTF8&th=1)
   - <img src="doc/usbc-short-1.jpg" height="60"> <img
     src="doc/usbc-short-2.jpg" height="60">
   - [USB-A plug to USB-C jack
-    microadapter](https://www.amazon.com/gp/product/B07LF72431) to fit
+    microadapter](https://www.adafruit.com/product/5461?gad_source=1) to fit
     in Pi USB port
     - <img src="doc/usbc-microadapter.jpg" height="60">
+    - any adapter will work (like
+      https://www.amazon.com/gp/product/B07LF72431 ), but small is good
 - short microhdmi to hdmi ribbon cable:
   - [20cm HDMI ribbon cable](https://www.amazon.com/dp/B0C36GT7HC) (15cm
     might also work?)
@@ -78,12 +80,14 @@ Cable](https://www.amazon.com/gp/product/B0D25V9QYG?ie=UTF8&th=1)
 ### Other
 
 - 4x 6mm M2 bolts (for mounting camera to front panel)
+  - OR TODO bolts
 - 4x [M2 nylock nuts](https://www.amazon.com/dp/B07BCC3NJ2) (for
     mounting camera to front panel)
-  - <img src="doc/m2-nylock-nuts.jpg" height="60">
-- 8x M2.5 bolts for Pi 5 <-> standoffs <-> chassis
-- 4x M2.5 standoffs for Pi 5
-- 2x M2.5 bolts for front panel
+  - <img src="doc/m2-nylock-nuts.jpg" height="60"
+- 4x 10mm M2.5 standoffs for Pi 5
+- 4x 4mm M2.5 bolts for Pi 5 <-> standoffs
+- 4x 8mm M2.5 bolts for standoffs <-> chassis
+- 2x 4mm M2.5 bolts for front panel
   - 2x M2.5 heat set inserts for front (to bolt front panel onto)
 - 1x 1/4" bolt for top
 - 1x [1/4" 6mm x 8mm heat set insert](https://www.amazon.com/gp/product/B094H2269W/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for bottom
