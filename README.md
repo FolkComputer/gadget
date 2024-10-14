@@ -83,7 +83,7 @@ Cable](https://www.amazon.com/gp/product/B0D25V9QYG?ie=UTF8&th=1)
   - OR TODO bolts
 - 4x [M2 nylock nuts](https://www.amazon.com/dp/B07BCC3NJ2) (for
     mounting camera to front panel)
-  - <img src="doc/m2-nylock-nuts.jpg" height="60"
+  - <img src="doc/m2-nylock-nuts.jpg" height="60">
 - 4x 10mm M2.5 standoffs for Pi 5
 - 4x 4mm M2.5 bolts for Pi 5 <-> standoffs
 - 4x 8mm M2.5 bolts for standoffs <-> chassis
