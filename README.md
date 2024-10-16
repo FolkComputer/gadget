@@ -28,7 +28,11 @@ files are generated from it)
 ### Electronics
 
 - Ultimems HD305D1-C1 ([manual](https://www.ultimems.com/download/hd305d1-c1_rev1_0_20231005_english/)) (recommended) or Nebra AnyBeam (should fit)
-  - There is a newer Ultimems unit [HD309D1-C1](https://raspberry-pi.ksyic.com/main/index/pdp.id/1053/pdp.open/1053) which I haven't tested yet
+  - There is a newer Ultimems unit
+    [HD309D1-C1](https://raspberry-pi.ksyic.com/main/index/pdp.id/1053/pdp.open/1053)
+    which I haven't tested yet
+  - **You should probably go into the Ultimems onboard settings (with
+    the wheel-button) and disable autokeystone and autorotate.**
 - [Raspberry Pi 5 2GB or more](https://www.microcenter.com/product/683269/5;_Broadcom_BCM2712_Quad-Core_Cortex-A76;_2GB_LPDDR4X_RAM)
   - (only the Pi 5 is guaranteed to supply the 5V1.1A
     over USB port to power the projector)
@@ -117,6 +121,10 @@ up.](https://forums.raspberrypi.com/viewtopic.php?t=362124) try adding
 `video=HDMI-A-1:1280x720M@60D` to /boot/firmware/cmdline.txt on the SD
 card.
 
+If `vulkaninfo --summary` only shows the llvmpipe software Vulkan
+device and not the V3DV Mesa device (the actual hardware GPU), try
+updating the kernel and GPU drivers with `sudo rpi-update`.
+
 Use apt to install libcamera0.3 and libcamera-dev.
 
 Use `sudo nmtui` to add more Wi-Fi networks.
@@ -142,15 +150,15 @@ in its journal at boot if you need to check: `sudo journalctl -u folk -n 30`)
 
 
 
------
+<!-- ----- -->
 
-notes for next-gen gadget:
-- attach the camera to the chassis. don't attach it to the front
-  panel. use upward-sloping screw holes. nylock nuts? how to not
-  collide with Pi?
-  - i want to fix the sloping issues and not have nuts everywhere
-  - how to attach on back...
-- tighten the 1/4 hole on bottom so the thing doesn't loosen
-- attach the front panel to the chassis using either snap-fit
-  connector or tabs with bolts
-- maybe have 2 cameras?
+<!-- notes for next-gen gadget: -->
+<!-- - attach the camera to the chassis. don't attach it to the front -->
+<!--   panel. use upward-sloping screw holes. nylock nuts? how to not -->
+<!--   collide with Pi? -->
+<!--   - i want to fix the sloping issues and not have nuts everywhere -->
+<!--   - how to attach on back... -->
+<!-- - tighten the 1/4 hole on bottom so the thing doesn't loosen -->
+<!-- - attach the front panel to the chassis using either snap-fit -->
+<!--   connector or tabs with bolts -->
+<!-- - maybe have 2 cameras? -->
