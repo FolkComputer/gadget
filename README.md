@@ -96,7 +96,9 @@ Cable](https://www.amazon.com/gp/product/B0D25V9QYG?ie=UTF8&th=1)
 
 Flash Raspberry Pi OS Lite (64-bit).
 
-Add to boot/config.txt on the SD card:
+Add to config.txt on the boot partition of the SD card (see the Ultimems manual and
+https://volzo.de/posts/raspberry-pi-projectors/ ) (this mounts as
+/boot/firmware/config.txt, so can also edit there over ssh):
 
 ```
 # For Ultimems projector:
@@ -109,6 +111,11 @@ hdmi_mode=14
 ```
 
 Boot the Pi. Ssh in and follow Folk README setup instructions.
+
+If the HDMI output on the projector is garbled, [EDID might be messed
+up.](https://forums.raspberrypi.com/viewtopic.php?t=362124) try adding
+`video=HDMI-A-1:1280x720M@60D` to /boot/firmware/cmdline.txt on the SD
+card.
 
 Use apt to install libcamera0.3 and libcamera-dev.
 
@@ -132,3 +139,18 @@ When display /disp/ has width /w/ height /h/ {
 
 (the camera path may be different, Folk will print all valid camera paths
 in its journal at boot if you need to check: `sudo journalctl -u folk -n 30`)
+
+
+
+-----
+
+notes for next-gen gadget:
+- attach the camera to the chassis. don't attach it to the front
+  panel. use upward-sloping screw holes. nylock nuts? how to not
+  collide with Pi?
+  - i want to fix the sloping issues and not have nuts everywhere
+  - how to attach on back...
+- tighten the 1/4 hole on bottom so the thing doesn't loosen
+- attach the front panel to the chassis using either snap-fit
+  connector or tabs with bolts
+- maybe have 2 cameras?
