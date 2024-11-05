@@ -148,7 +148,35 @@ When display /disp/ has width /w/ height /h/ {
 (the camera path may be different, Folk will print all valid camera paths
 in its journal at boot if you need to check: `sudo journalctl -u folk -n 30`)
 
+### Ad-hoc Wi-Fi
 
+[Disable
+NetworkManager](https://askubuntu.com/questions/1091653/how-do-i-disable-network-manager-permanently)
+(I have found it [impossible](https://x.com/rsnous/status/1853870032289431665) to get ad-hoc Wi-Fi to work using it):
+
+```
+$ sudo systemctl stop NetworkManager.service
+$ sudo systemctl disable NetworkManager.service
+$ sudo systemctl stop NetworkManager-wait-online.service
+$ sudo systemctl disable NetworkManager-wait-online.service
+$ sudo systemctl stop NetworkManager-dispatcher.service
+$ sudo systemctl disable NetworkManager-dispatcher.service
+```
+
+Edit your setup.folk to run the iwconfig and ip commands to make an
+ad-hoc network:
+
+```
+if {[catch {exec ip address | grep 169.254.34.2}]} {
+    exec sudo iwconfig wlan0 mode ad-hoc
+    exec sudo iwconfig wlan0 essid gadget-pink
+    exec sudo ip link set wlan0 up
+    exec sudo ip addr add 169.254.34.2/16 dev wlan0
+}
+```
+
+You should be able to ssh into `folk@169.254.34.2` from any other computer on the
+gadget-pink network now.
 
 <!-- ----- -->
 
