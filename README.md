@@ -1,8 +1,15 @@
 # gadget
 🔦
 
+(Still very WIP; instructions may be inaccurate. See also
+[gadget2](https://github.com/FolkComputer/gadget2) which uses
+easier-to-get projector part and has a battery and a bunch of other
+advancements)
+
 Very tentative design. Sort of minimum viable design to prototype
 handheld interactions.
+
+![](mini.png)
 
 Open-back until it's more stable (sometimes you want to replug
 the projector, sometimes you want to plug in a USB keyboard to
@@ -42,13 +49,7 @@ files are generated from it)
     - (you cannot use an off-the-shelf USB-C power supply; you must
       use this one)
     - TODO: battery system
-- [Raspberry Pi Camera 3
-  Wide](https://www.microcenter.com/product/662018/raspberry-pi-camera-3-wide)
-  (maybe can also be [NoIR version](https://www.microcenter.com/product/662019/Camera_3_Wide_NoIR))
-  - [15cm 15-pin-to-22-pin "Pi Zero Camera
-    Cable"](https://www.amazon.com/dp/B0716TB6X3) (special, not the
-    one that comes with camera -- Pi 5 has narrower MIPI ports)
-    - <img src="doc/pi-camera-cable-1.jpg" height="60"> <img src="doc/pi-camera-cable-2.jpg" height="60">
+- [ELP 3DGS1200P01 V83 stereo USB camera](https://www.amazon.com/dp/B0DQ4R9S6W)
 
 ### Cables
 
@@ -89,8 +90,8 @@ Cable](https://www.amazon.com/gp/product/B0D25V9QYG?ie=UTF8&th=1)
     mounting camera to front panel)
   - <img src="doc/m2-nylock-nuts.jpg" height="60">
 - 4x 10mm M2.5 standoffs for Pi 5
-- 4x 4mm M2.5 bolts for Pi 5 <-> standoffs
-- 4x 8mm M2.5 bolts for standoffs <-> chassis
+- 4x 6mm M2.5 bolts for Pi 5 <-> standoffs
+- 4x 6mm M2.5 bolts for standoffs <-> chassis
 - 2x 4mm M2.5 bolts for front panel
   - 2x M2.5 heat set inserts for front (to bolt front panel onto)
 - 1x 1/4" bolt for top
@@ -177,16 +178,3 @@ if {[catch {exec ip address | grep 169.254.34.2}]} {
 
 You should be able to ssh into `folk@169.254.34.2` from any other computer on the
 gadget-pink network now.
-
-<!-- ----- -->
-
-<!-- notes for next-gen gadget: -->
-<!-- - attach the camera to the chassis. don't attach it to the front -->
-<!--   panel. use upward-sloping screw holes. nylock nuts? how to not -->
-<!--   collide with Pi? -->
-<!--   - i want to fix the sloping issues and not have nuts everywhere -->
-<!--   - how to attach on back... -->
-<!-- - tighten the 1/4 hole on bottom so the thing doesn't loosen -->
-<!-- - attach the front panel to the chassis using either snap-fit -->
-<!--   connector or tabs with bolts -->
-<!-- - maybe have 2 cameras? -->
