@@ -9,7 +9,7 @@ advancements)
 Very tentative design. Sort of minimum viable design to prototype
 handheld interactions.
 
-![](mini.png)
+![](doc/mini.png)
 
 Open-back until it's more stable (sometimes you want to replug
 the projector, sometimes you want to plug in a USB keyboard to
